@@ -1,0 +1,24 @@
+name: Publish .NET SDK
+
+on:
+  push:
+    tags:
+      - "dotnet/v*"
+
+jobs:
+  publish:
+    name: Pack & push to NuGet
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dotnet
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Extract version
+        id: ver
+        run: echo "version=${GITHUB_REF_NAME#dotnet/v}" >> "$GITHUB_OUTPUT"
+      - run: dotnet pack --configuration Release -p:PackageVersion=${{ steps.ver.outputs.version }} --output ./nupkg
+      - run: dotnet nuget push ./nupkg/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate

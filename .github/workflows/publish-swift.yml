@@ -1,0 +1,23 @@
+name: Publish Swift SDK
+
+on:
+  push:
+    tags:
+      - "swift/v*"
+
+jobs:
+  release:
+    name: Create GitHub release for SwiftPM
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract version
+        id: ver
+        run: echo "version=${GITHUB_REF_NAME#swift/}" >> "$GITHUB_OUTPUT"
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Swift SDK ${{ steps.ver.outputs.version }}
+          generate_release_notes: true

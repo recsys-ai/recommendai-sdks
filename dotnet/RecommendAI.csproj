@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>RecommendAI</RootNamespace>
+    <AssemblyName>RecommendAI</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <Version>1.0.0</Version>
+    <Authors>RecSys.AI</Authors>
+    <Description>Official .NET SDK for the RecSys.AI personalised-recommendation platform.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/recsys-ai/recommendai-sdk</RepositoryUrl>
+    <PackageTags>recommendations;recsys;ai;personalization;sdk</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="tests/**/*.cs" />
+    <Compile Remove="examples/**/*.cs" />
+  </ItemGroup>
+</Project>

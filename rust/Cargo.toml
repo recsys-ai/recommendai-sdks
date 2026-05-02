@@ -1,0 +1,24 @@
+[package]
+name    = "recommendai"
+version = "1.0.0"
+edition = "2021"
+description = "Official Rust SDK for the RecSys.AI personalised-recommendation platform"
+license = "MIT"
+
+[lib]
+name = "recommendai"
+path = "src/lib.rs"
+
+[[example]]
+name = "simulation"
+path = "examples/simulation.rs"
+
+[dependencies]
+reqwest  = { version = "0.12", features = ["blocking", "json"] }
+serde    = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror  = "1"
+
+[dev-dependencies]
+mockito   = "1"
+tiny_http = "0.12"

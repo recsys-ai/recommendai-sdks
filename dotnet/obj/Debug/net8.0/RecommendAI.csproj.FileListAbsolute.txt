@@ -1,0 +1,12 @@
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/RecommendAI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/RecommendAI.AssemblyInfoInputs.cache
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/RecommendAI.AssemblyInfo.cs
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/RecommendAI.csproj.CoreCompileInputs.cache
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/RecommendAI.sourcelink.json
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/bin/Debug/net8.0/RecommendAI.deps.json
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/bin/Debug/net8.0/RecommendAI.dll
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/bin/Debug/net8.0/RecommendAI.pdb
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/RecommendAI.dll
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/refint/RecommendAI.dll
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/RecommendAI.pdb
+/Users/ibrahimogod/projects/github/recommendai-platform/recommendai-sdks/dotnet/obj/Debug/net8.0/ref/RecommendAI.dll

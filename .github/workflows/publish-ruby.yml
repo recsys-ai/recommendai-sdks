@@ -1,0 +1,29 @@
+name: Publish Ruby SDK
+
+on:
+  push:
+    tags:
+      - "ruby/v*"
+
+jobs:
+  publish:
+    name: Build & push to RubyGems
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ruby
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      - name: Configure gem credentials
+        run: |
+          mkdir -p ~/.gem
+          printf -- "---\n:rubygems_api_key: %s\n" "${{ secrets.RUBYGEMS_API_KEY }}" > ~/.gem/credentials
+          chmod 0600 ~/.gem/credentials
+      - name: Build gem
+        run: gem build *.gemspec
+      - name: Push gem
+        run: gem push *.gem

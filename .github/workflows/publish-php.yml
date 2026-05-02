@@ -1,0 +1,17 @@
+name: Publish PHP SDK
+
+on:
+  push:
+    tags:
+      - "php/v*"
+
+jobs:
+  notify-packagist:
+    name: Notify Packagist of new release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Packagist update
+        run: |
+          curl -sS -X POST \
+            "https://packagist.org/api/update-package?username=${{ secrets.PACKAGIST_USERNAME }}&apiToken=${{ secrets.PACKAGIST_API_TOKEN }}" \
+            -d '{"repository":{"url":"https://github.com/${{ github.repository }}"}}'

@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recommendai"
+version = "1.0.0"
+description = "Official Python SDK for RecSys.AI Recommendation System"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "RecSys.AI Team", email = "dev@recsys-ai.com"}
+]
+keywords = ["recommendations", "machine-learning", "api-client", "sdk"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+    "python-dateutil>=2.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+]
+
+[project.urls]
+Homepage = "https://recsys-ai.com"
+Documentation = "https://docs.recsys-ai.com"
+Repository = "https://github.com/recsys-ai/recommendai-sdks"
+"Bug Tracker" = "https://github.com/recsys-ai/recommendai-sdks/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["recommendai*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=recommendai --cov-report=term-missing --cov-report=html"
+asyncio_mode = "auto"
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.8"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

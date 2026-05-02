@@ -1,0 +1,23 @@
+name: Publish Dart SDK
+
+on:
+  push:
+    tags:
+      - "dart/v*"
+
+jobs:
+  publish:
+    name: Publish to pub.dev
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # required for pub.dev OIDC publishing
+    defaults:
+      run:
+        working-directory: dart
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: dart pub get
+      - run: dart pub publish --force

@@ -1,0 +1,63 @@
+# ===== Python (python/ SDK) =====
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.so
+**/*.egg-info/
+**/*.egg
+**/.eggs/
+**/dist/
+**/build/
+**/.venv/
+**/venv/
+**/ENV/
+**/.pytest_cache/
+**/.coverage
+**/.coverage.*
+**/htmlcov/
+**/coverage.xml
+**/.tox/
+**/.nox/
+
+# ===== TypeScript / Node (typescript/ SDK) =====
+**/node_modules/
+**/dist/
+**/build/
+**/.angular/
+**/coverage/
+**/*.js.map
+**/*.d.ts.map
+
+# ===== Environment & Secrets =====
+.env
+.env.local
+.env.*.local
+*.secret
+
+# ===== IDEs =====
+.vscode/
+.idea/
+*.iml
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+*.swp
+
+# ===== Rust (rust/ SDK) =====
+**/target/
+
+# ===== Swift (swift/ SDK) =====
+**/.build/
+**/Package.resolved
+
+# ===== Dart (dart/ SDK) =====
+**/.dart_tool/
+**/pubspec.lock
+
+# ===== Go (go/ SDK) =====
+**/vendor/
+
+# ===== Logs =====
+*.log
+logs/
