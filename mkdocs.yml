@@ -1,8 +1,8 @@
 site_name: RecSys.AI SDK
 site_description: Official client libraries for the RecSys.AI recommendation platform
-site_url: https://recsys-ai.github.io/recommendai-sdk/
-repo_url: https://github.com/recsys-ai/recommendai-sdk
-repo_name: recsys-ai/recommendai-sdk
+site_url: https://recsys-ai.github.io/recommendai-sdks/
+repo_url: https://github.com/recsys-ai/recommendai-sdks
+repo_name: recsys-ai/recommendai-sdks
 edit_uri: edit/main/docs/
 
 theme:
