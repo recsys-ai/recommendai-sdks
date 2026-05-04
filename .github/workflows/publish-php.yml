@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Trigger Packagist update
         run: |
-          curl -sS -X POST \
+          curl -sSf -X POST \
             "https://packagist.org/api/update-package?username=${{ secrets.PACKAGIST_USERNAME }}&apiToken=${{ secrets.PACKAGIST_API_TOKEN }}" \
             -d '{"repository":{"url":"https://github.com/${{ github.repository }}"}}'
