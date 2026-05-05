@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'exceptions.dart';
-import 'models.dart';
+
 import 'resources.dart';
 
 class RecommendAIClient {

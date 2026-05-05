@@ -1,6 +1,9 @@
 name: recommendai
 description: Official Dart/Flutter SDK for the RecSys.AI recommendation platform.
 version: 1.0.0
+homepage: https://github.com/recsys-ai/recommendai-sdks
+repository: https://github.com/recsys-ai/recommendai-sdks
+issue_tracker: https://github.com/recsys-ai/recommendai-sdks/issues
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
