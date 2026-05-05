@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-go get github.com/recsys-ai/recommendai-sdk/go/recommendai
+go get github.com/recsys-ai/recommendai-sdks/go/recommendai
 ```
 
 Requires Go 1.21+.
@@ -16,7 +16,7 @@ package main
 import (
     "context"
     "fmt"
-    "github.com/recsys-ai/recommendai-sdk/go/recommendai"
+    "github.com/recsys-ai/recommendai-sdks/go/recommendai"
 )
 
 func main() {
@@ -60,7 +60,7 @@ client := recommendai.NewClientWithConfig("your_api_key", recommendai.ClientConf
 ## Error Handling
 
 ```go
-import "github.com/recsys-ai/recommendai-sdk/go/recommendai"
+import "github.com/recsys-ai/recommendai-sdks/go/recommendai"
 
 recs, err := client.Recommendations.Similar(ctx, "item-123", 10)
 if err != nil {

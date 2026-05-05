@@ -9,7 +9,7 @@ Add the dependency to your `Package.swift`:
 ```swift
 dependencies: [
     .package(
-        url: "https://github.com/recsys-ai/recommendai-sdk",
+        url: "https://github.com/recsys-ai/recommendai-sdks",
         from: "1.0.0"
     ),
 ],

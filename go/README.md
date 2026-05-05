@@ -9,7 +9,7 @@ Official Go client for the [RecSys.AI](https://recsys-ai.com) personalised-recom
 ## Installation
 
 ```bash
-go get github.com/recsys-ai/recommendai-go
+go get github.com/recsys-ai/recommendai-sdks/go
 ```
 
 ## Quick Start
@@ -20,7 +20,7 @@ package main
 import (
     "fmt"
     "log"
-    recommendai "github.com/recsys-ai/recommendai-go"
+    recommendai "github.com/recsys-ai/recommendai-sdks/go"
 )
 
 func main() {

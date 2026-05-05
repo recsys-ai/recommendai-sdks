@@ -18,7 +18,7 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
 
 === "Go"
     ```bash
-    go get github.com/recsys-ai/recommendai-sdk/go
+    go get github.com/recsys-ai/recommendai-sdkss/go
     ```
 
 === "Dart"
@@ -47,7 +47,7 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
 
 === "PHP"
     ```bash
-    composer require recommendai/sdk
+    composer require recsys-ai/recommendai
     ```
 
 === "Ruby"
@@ -64,7 +64,7 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
 === "Swift"
     ```swift
     // Package.swift
-    .package(url: "https://github.com/recsys-ai/recommendai-sdk", from: "1.0.0")
+    .package(url: "https://github.com/recsys-ai/recommendai-sdks", from: "1.0.0")
     ```
 
 ## Basic Usage
@@ -76,7 +76,7 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
     client = RecommendAIClient(api_key="your_api_key")
 
     # Similar items
-    recs = client.recommendations.similar("item-123", limit=10)
+    similar = client.recommendations.similar("item-123", limit=10)
 
     # Popular items
     popular = client.recommendations.popular(limit=10, category="electronics")
@@ -92,7 +92,7 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
 
     const client = new RecommendAIClient({ apiKey: "your_api_key" });
 
-    const similar = await client.recommendations.similar("item-123", { limit: 10 });
+    const similar = await client.recommendations.similar({ itemId: "item-123", limit: 10 });
     const popular = await client.recommendations.popular({ limit: 10, category: "electronics" });
 
     const alive = await client.ping();
@@ -100,7 +100,7 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
 
 === "Go"
     ```go
-    import "github.com/recsys-ai/recommendai-sdk/go/recommendai"
+    import "github.com/recsys-ai/recommendai-sdkss/go/recommendai"
 
     client := recommendai.NewClient("your_api_key")
 
@@ -108,6 +108,78 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
     popular, err := client.Recommendations.Popular(ctx, 10, "electronics")
 
     ok, err := client.Ping(ctx)
+    ```
+
+=== "Dart"
+    ```dart
+    import 'package:recommendai/recommendai.dart';
+
+    final client = RecommendAIClient(apiKey: 'your_api_key');
+
+    final similar = await client.recommendations.similar('item-123', limit: 10);
+    final popular = await client.recommendations.popular(limit: 10, category: 'electronics');
+
+    final alive = await client.ping();
+    ```
+
+=== ".NET"
+    ```csharp
+    using RecommendAI;
+
+    using var client = new RecommendAIClient("your_api_key");
+
+    var similar = await client.Recommendations.SimilarAsync("item-123", limit: 10);
+    var popular = await client.Recommendations.PopularAsync(limit: 10, category: "electronics");
+
+    bool alive = await client.PingAsync();
+    ```
+
+=== "Java"
+    ```java
+    import com.recommendai.sdk.RecommendAIClient;
+
+    RecommendAIClient client = new RecommendAIClient("your_api_key");
+
+    var similar = client.recommendations().similar("item-123", 10);
+    var popular = client.recommendations().popular(10, "electronics");
+
+    boolean alive = client.ping();
+    ```
+
+=== "Kotlin"
+    ```kotlin
+    import com.recommendai.sdk.RecommendAIClient
+
+    val client = RecommendAIClient("your_api_key")
+
+    val similar = client.recommendations.similar("item-123", limit = 10)
+    val popular = client.recommendations.popular(limit = 10, category = "electronics")
+
+    val alive = client.ping()
+    ```
+
+=== "PHP"
+    ```php
+    use RecommendAI\RecommendAIClient;
+
+    $client = new RecommendAIClient('your_api_key');
+
+    $similar = $client->recommendations()->similar('item-123', 10);
+    $popular = $client->recommendations()->popular(10, 'electronics');
+
+    $alive = $client->ping();
+    ```
+
+=== "Ruby"
+    ```ruby
+    require 'recommendai'
+
+    client = RecommendAI::Client.new(api_key: 'your_api_key')
+
+    similar = client.recommendations.similar('item-123', limit: 10)
+    popular = client.recommendations.popular(limit: 10, category: 'electronics')
+
+    alive = client.ping
     ```
 
 === "Rust"
@@ -120,6 +192,18 @@ Sign up at [recsys.ai](https://recsys.ai) to get an API key.
     let popular = client.recommendations().popular(10, Some("electronics"))?;
 
     let alive = client.ping();
+    ```
+
+=== "Swift"
+    ```swift
+    import RecommendAI
+
+    let client = RecommendAIClient(apiKey: "your_api_key")
+
+    let similar = try await client.recommendations.similar(itemId: "item-123", limit: 10)
+    let popular = try await client.recommendations.popular(limit: 10, category: "electronics")
+
+    let alive = await client.ping()
     ```
 
 ## Authentication
@@ -158,4 +242,51 @@ The base URL defaults to `http://localhost:8080` for local development. Set it v
 === "TypeScript"
     ```typescript
     const client = new RecommendAIClient({ apiKey: "key", baseUrl: "https://api.recsys.ai" });
+    ```
+
+=== "Go"
+    ```go
+    client := recommendai.NewClient("key", recommendai.WithBaseURL("https://api.recsys.ai"))
+    ```
+
+=== "Dart"
+    ```dart
+    final client = RecommendAIClient(apiKey: 'key', baseUrl: 'https://api.recsys.ai');
+    ```
+
+=== ".NET"
+    ```csharp
+    using var client = new RecommendAIClient(apiKey: "key", baseUrl: "https://api.recsys.ai");
+    ```
+
+=== "Java"
+    ```java
+    RecommendAIClient client = new RecommendAIClient("key", "https://api.recsys.ai");
+    ```
+
+=== "Kotlin"
+    ```kotlin
+    val client = RecommendAIClient("key", ClientConfig(baseUrl = "https://api.recsys.ai"))
+    ```
+
+=== "PHP"
+    ```php
+    $client = new RecommendAIClient('key', 'https://api.recsys.ai');
+    ```
+
+=== "Ruby"
+    ```ruby
+    client = RecommendAI::Client.new(api_key: 'key', base_url: 'https://api.recsys.ai')
+    ```
+
+=== "Rust"
+    ```rust
+    let client = RecommendAIClient::builder("key")
+        .base_url("https://api.recsys.ai")
+        .build();
+    ```
+
+=== "Swift"
+    ```swift
+    let client = RecommendAIClient(apiKey: "key", config: ClientConfig(baseURL: "https://api.recsys.ai"))
     ```

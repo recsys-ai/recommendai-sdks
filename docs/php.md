@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require recommendai/sdk
+composer require recsys-ai/recommendai
 ```
 
 Requires PHP 8.1+ and the `ext-json` extension.

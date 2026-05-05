@@ -1,5 +1,5 @@
-import { RecommendAIClient } from '../src/client';
-import { AuthenticationError, NotFoundError } from '../src/errors';
+import { RecommendAIClient } from './client';
+import { AuthenticationError, NotFoundError } from './errors';
 
 describe('RecommendAIClient', () => {
   let client: RecommendAIClient;

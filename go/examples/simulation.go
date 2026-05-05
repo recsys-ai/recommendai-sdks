@@ -18,7 +18,7 @@ import (
 	"sync"
 	"time"
 
-	recommendai "github.com/recsys-ai/recommendai-go"
+	recommendai "github.com/recsys-ai/recommendai-sdks/go"
 )
 
 const mockPort = 17893

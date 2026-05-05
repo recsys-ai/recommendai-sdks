@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	recommendai "github.com/recsys-ai/recommendai-go"
+	recommendai "github.com/recsys-ai/recommendai-sdks/go"
 )
 
 func newTestServer(t *testing.T, handler http.HandlerFunc) (*httptest.Server, *recommendai.Client) {

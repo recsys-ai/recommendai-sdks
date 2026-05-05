@@ -14,7 +14,7 @@ import (
 const (
 	defaultBaseURL = "http://localhost:8080"
 	defaultTimeout = 30 * time.Second
-	userAgent      = "recommendai-go/1.0.0"
+	userAgent      = "recommendai-go-sdk/1.0.0"
 )
 
 // Client is the RecSys.AI API client. Create one with [New].

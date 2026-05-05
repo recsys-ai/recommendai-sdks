@@ -10,7 +10,10 @@
     <Authors>RecSys.AI</Authors>
     <Description>Official .NET SDK for the RecSys.AI personalised-recommendation platform.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/recsys-ai/recommendai-sdk</RepositoryUrl>
+    <PackageId>RecommendAI</PackageId>
+    <PackageProjectUrl>https://recsys-ai.github.io/recommendai-sdks/dotnet.html</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/recsys-ai/recommendai-sdks</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>recommendations;recsys;ai;personalization;sdk</PackageTags>
   </PropertyGroup>
 
