@@ -58,6 +58,21 @@ Thumbs.db
 # ===== Go (go/ SDK) =====
 **/vendor/
 
+# ===== .NET (dotnet/ SDK) =====
+**/bin/
+**/obj/
+*.nupkg
+*.snupkg
+
+# ===== Java / Kotlin =====
+**/target/
+**/.gradle/
+**/.kotlin/
+**/build/
+**/*.class
+**/*.jar
+!**/gradle-wrapper.jar
+
 # ===== Logs =====
 *.log
 logs/
